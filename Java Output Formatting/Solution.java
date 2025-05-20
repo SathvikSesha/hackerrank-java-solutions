@@ -1,22 +1,18 @@
-import java.io.*;
+import java.util.Scanner;
 
-public class Solution {
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+class Solution {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
 
-        int N = Integer.parseInt(bufferedReader.readLine().trim());
-        if (N % 2 != 0) {
-            System.out.println("Weird");
-        } else {
-            if (N >= 2 && N <= 5) {
-                System.out.println("Not Weird");
-            } else if (N >= 6 && N <= 20) {
-                System.out.println("Weird");
-            } else if (N > 20) {
-                System.out.println("Not Weird");
-            }
+        System.out.println("================================");
+
+        for (int i = 0; i < 3; i++) {
+            String s = sc.next();
+            int n = sc.nextInt();
+            int l = 15 - s.length();
+
+            System.out.printf("%s%s%03d\n", s, " ".repeat(l), n);
         }
-
-        bufferedReader.close();
+        System.out.println("================================");
     }
 }
