@@ -15,5 +15,6 @@ public class Solution {
         System.out.println("China: " + Chi.format(n));
         NumberFormat fra = NumberFormat.getCurrencyInstance(Locale.FRANCE);
         System.out.println("France: " + fra.format(n));
+        sc.close();
     }
 }
