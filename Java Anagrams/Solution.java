@@ -4,7 +4,7 @@ public class Solution {
     public static String Sorted(String str) {
         char charArray[] = str.toCharArray();
         for (int i = 0; i < charArray.length; i++) {
-            for (int j = 0; j < charArray.length - i - 1; j++)
+            for (int j = 0; j < charArray.length - i; j++)
                 if (charArray[j] > charArray[j + 1]) {
                     char temp = charArray[j];
                     charArray[j] = charArray[j + 1];
